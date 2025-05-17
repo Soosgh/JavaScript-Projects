@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عداد الركّاب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: #f0f0f5;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #count-el {
+            font-size: 60px;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #increment-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #save-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        #reset-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #save-el {
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>عدد الركّاب:</h1>
+    <h2 id="count-el">0</h2>
+
+    <button id="increment-btn" onclick="increment()">زِد واحد</button>
+    <button id="save-btn" onclick="save()">احفظ العدد</button>
+    <button id="reset-btn" onclick="reset()">إعادة</button>
+
+    <p id="save-el">العدادات المحفوظة: </p>
+
+    <script>
+        // هادي المتغيرات لتخزين العدد الحالي ومرجع للعناصر من الصفحة
+        let count = 0
+        let countEl = document.getElementById("count-el")  // الرقم المعروض
+        let saveEl = document.getElementById("save-el")    // مكان عرض المحفوظات
+
+        // لما يضغط على زر "زِد واحد"
+        function increment() {
+            count += 1  // زيد واحد
+            countEl.textContent = count  // حدّث الرقم اللي ظاهر
+        }
+
+        // لما يضغط على "احفظ العدد"
+        function save() {
+            let saved = count + " - "  // خزّن العدد الحالي بشكل بسيط
+            saveEl.textContent += saved  // ضيفه للسجل
+            count = 0  // صفّر العداد
+            countEl.textContent = 0  // صفّر الرقم المعروض
+        }
+
+        // زر "إعادة" يمسح العداد والسجل
+        function reset() {
+            count = 0
+            countEl.textContent = 0
+            saveEl.textContent = "العدادات المحفوظة: "
+        }
+    </script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عداد الركّاب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: #f0f0f5;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #count-el {
+            font-size: 60px;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #increment-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #save-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        #reset-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #save-el {
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>عدد الركّاب:</h1>
+    <h2 id="count-el">0</h2>
+
+    <button id="increment-btn" onclick="increment()">زِد واحد</button>
+    <button id="save-btn" onclick="save()">احفظ العدد</button>
+    <button id="reset-btn" onclick="reset()">إعادة</button>
+
+    <p id="save-el">العدادات المحفوظة: </p>
+
+    <script>
+        // هادي المتغيرات لتخزين العدد الحالي ومرجع للعناصر من الصفحة
+        let count = 0
+        let countEl = document.getElementById("count-el")  // الرقم المعروض
+        let saveEl = document.getElementById("save-el")    // مكان عرض المحفوظات
+
+        // لما يضغط على زر "زِد واحد"
+        function increment() {
+            count += 1  // زيد واحد
+            countEl.textContent = count  // حدّث الرقم اللي ظاهر
+        }
+
+        // لما يضغط على "احفظ العدد"
+        function save() {
+            let saved = count + " - "  // خزّن العدد الحالي بشكل بسيط
+            saveEl.textContent += saved  // ضيفه للسجل
+            count = 0  // صفّر العداد
+            countEl.textContent = 0  // صفّر الرقم المعروض
+        }
+
+        // زر "إعادة" يمسح العداد والسجل
+        function reset() {
+            count = 0
+            countEl.textContent = 0
+            saveEl.textContent = "العدادات المحفوظة: "
+        }
+    </script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عداد الركّاب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: #f0f0f5;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #count-el {
+            font-size: 60px;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #increment-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #save-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        #reset-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #save-el {
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>عدد الركّاب:</h1>
+    <h2 id="count-el">0</h2>
+
+    <button id="increment-btn" onclick="increment()">زِد واحد</button>
+    <button id="save-btn" onclick="save()">احفظ العدد</button>
+    <button id="reset-btn" onclick="reset()">إعادة</button>
+
+    <p id="save-el">العدادات المحفوظة: </p>
+
+    <script>
+        // هادي المتغيرات لتخزين العدد الحالي ومرجع للعناصر من الصفحة
+        let count = 0
+        let countEl = document.getElementById("count-el")  // الرقم المعروض
+        let saveEl = document.getElementById("save-el")    // مكان عرض المحفوظات
+
+        // لما يضغط على زر "زِد واحد"
+        function increment() {
+            count += 1  // زيد واحد
+            countEl.textContent = count  // حدّث الرقم اللي ظاهر
+        }
+
+        // لما يضغط على "احفظ العدد"
+        function save() {
+            let saved = count + " - "  // خزّن العدد الحالي بشكل بسيط
+            saveEl.textContent += saved  // ضيفه للسجل
+            count = 0  // صفّر العداد
+            countEl.textContent = 0  // صفّر الرقم المعروض
+        }
+
+        // زر "إعادة" يمسح العداد والسجل
+        function reset() {
+            count = 0
+            countEl.textContent = 0
+            saveEl.textContent = "العدادات المحفوظة: "
+        }
+    </script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عداد الركّاب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: #f0f0f5;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #count-el {
+            font-size: 60px;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #increment-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #save-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        #reset-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #save-el {
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>عدد الركّاب:</h1>
+    <h2 id="count-el">0</h2>
+
+    <button id="increment-btn" onclick="increment()">زِد واحد</button>
+    <button id="save-btn" onclick="save()">احفظ العدد</button>
+    <button id="reset-btn" onclick="reset()">إعادة</button>
+
+    <p id="save-el">العدادات المحفوظة: </p>
+
+    <script>
+        // هادي المتغيرات لتخزين العدد الحالي ومرجع للعناصر من الصفحة
+        let count = 0
+        let countEl = document.getElementById("count-el")  // الرقم المعروض
+        let saveEl = document.getElementById("save-el")    // مكان عرض المحفوظات
+
+        // لما يضغط على زر "زِد واحد"
+        function increment() {
+            count += 1  // زيد واحد
+            countEl.textContent = count  // حدّث الرقم اللي ظاهر
+        }
+
+        // لما يضغط على "احفظ العدد"
+        function save() {
+            let saved = count + " - "  // خزّن العدد الحالي بشكل بسيط
+            saveEl.textContent += saved  // ضيفه للسجل
+            count = 0  // صفّر العداد
+            countEl.textContent = 0  // صفّر الرقم المعروض
+        }
+
+        // زر "إعادة" يمسح العداد والسجل
+        function reset() {
+            count = 0
+            countEl.textContent = 0
+            saveEl.textContent = "العدادات المحفوظة: "
+        }
+    </script>
+
+</body>
+
+</html>
